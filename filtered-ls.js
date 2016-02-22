@@ -24,22 +24,23 @@
 
 // OR
 
-// var fs = require("fs");
-// var path = require("path");
+var fs = require("fs");
+var path = require("path");
 
-// var filePath = process.argv[2];
-// var extension = "." + process.argv[3];
+var filePath = process.argv[2];
+var extension = "." + process.argv[3];
 
-// fs.readdir(filePath, function(err, list){
-// 	if(!err) {
-// 		list.filter(function(fileName){
-// 			return path.extname(fileName) === extension;
-// 		})
-// 		.forEach(function(element){
-// 			console.log(element);
-// 		});
+fs.readdir(filePath, function(err, list){
+	if(!err) {
+		list.filter(function(fileName){
+			return path.extname(fileName) === extension;
+		})
+		.forEach(function(element){
+			console.log(element);
+		});
 
-// 	} else {
-// 		console.log("something is wrong");
-// 	}
-// });
+	} else {
+		console.log("something is wrong");
+	}
+});
+
